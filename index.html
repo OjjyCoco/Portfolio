@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <i class="fas fa-stream"></i>
+        <h1>
+            Nathan</br>HECKMANN
+        </h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#projets">Projets</a>
+            <a href="#competences">Compétences</a>
+            <a href="#">CV / Contact</a>
+        </nav>
+    </header>
+
+    <div id="image"></div>
+    <div id="first_text">
+        <p>Bonjour,</br>je m'appel <span>Nathan</span>,</br> j'étudie, je code, je crée.</p>
+    </div>
+
+    <p id="first_para">
+        Actuellement en école d'ingénieur à Paris, je transforme une partie de mon temps libre en ligne de code et en projets mécatroniques. Voici l'ensemble de mes projets, accompagnés de précisions sur mes compétences.
+    </p>
+
+    <div id="services">
+        <h1 class="titre_categ">Services</h1>
+        <p>
+            Maîtrisant les langages informatiques nécaissaires à la création d'un page WEB, je suis à la recherche d'experience. Je répondrai donc à votre besoin de manière rigoureuse et professionnel.</br></br>Faite moi signe si vous êtes prêt(e) à vous faire une place sur la toile !
+        </p>
+        <!--
+        <div id="icons">
+            <div class="icon" id="resto"></div>
+            <div class="icon" id="assoc"></div>
+            <div class="icon" id="blog"></div>
+        </div> -->
+        <div id="service_img"></div>
+    </div>
+
+    <div id="projets">
+        <h1 class="titre_categ">Projets</h1>
+
+        <div class="projet">
+            <div id="resto_chinois">
+            </div>
+            <a href="#">
+                Restaurant Choinois
+            </a>
+        </div>
+
+        <div class="projet">
+            <div id="assoc">
+            </div>
+            <a>
+                Association
+            </a>
+        </div>
+
+        <div class="projet">
+            <div id="reso">
+            </div>
+            <a>
+                Réseau Social
+            </a>
+        </div>
+    </div>
+
+
+    <div id="competences">
+        <h1 class="titre_categ">Compétences</h1>
+        <p>Notions des langages du développement WEB. Ces langages me permettront de répondre le mieux à votre demande.</p>
+
+        <div class="container">
+            <div class="logo" id="html5"></div>
+            <div class="out_btn">
+                <div class="in_btn" id="html_in">
+                </div>
+            </div>
+            <h5>HTML5</h5>
+        </div>
+
+        <div class="container">
+            <div class="logo" id="css3"></div>
+            <div class="out_btn">
+                <div class="in_btn" id="css_in">
+                </div>
+            </div>
+            <h5>CSS3</h5>
+        </div>
+
+        <div class="container">
+            <div class="logo" id="js"></div>
+            <div class="out_btn">
+                <div class="in_btn" id="js_in">
+                </div>
+            </div>
+            <h5 >JavaScript</h5>
+        </div>
+
+        <div class="container">
+            <div class="logo" id="python"></div>
+            <div class="out_btn">
+                <div class="in_btn" id="python_in">
+                </div>
+            </div>
+            <h5>Python</h5>
+        </div>
+    </div>
+
+    <div id="cv_contact">
+        <h1 class="titre_categ">CV / Contact</h1>
+        <p>Si vous désirez en savoir plus, n'hésitez pas à regarder mon CV en ligne ! Vous y trouverez une partie contenant mes coordonnées pour me contacter. Sinon, vous pouvez remplir le formulaire ci-dessous pour me laisser une message.</p>
+        <button type="button" id="cv_btn" onclick="window.location='https://cv-nathan-heckmann.netlify.com';">CV</button>
+    </div>
+
+    <div id="formulaire">
+        <form method="post" action ="#" id="loginform">
+                <input type="text" name="nom" required placeholder="Nom" class="champs">
+                <input type="text" name="prenom" required placeholder="Prénom" class="champs">
+                <input type="text" name="contact" required placeholder="Téléphone ou e-mail" class="champs">
+                <textarea id="story" name="story"
+                rows="10" cols="35" placeholder="Votre message">
+                </textarea>
+                <input type="submit" value="Envoyer" id="envoyer_btn"/>
+        </form>
+    </div>
+
+
+    
+
+    <script src="https://kit.fontawesome.com/7827c1e29f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="portfolio.js"></script>
+</body>
+</html>
