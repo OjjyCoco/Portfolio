@@ -4,37 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="portfolio_pc_size.css" />
     <title>Portfolio</title>
 </head>
 <body>
     <header>
         <i class="fas fa-stream"></i>
-        <h1>
+        <span>
             Nathan</br>HECKMANN
-        </h1>
+        </span>
         <nav>
             <a href="#services">Services</a>
             <a href="#projets">Projets</a>
             <a href="#competences">Compétences</a>
             <a href="#cv_contact">CV / Contact</a>
         </nav>
+        <div id="level"></div>
     </header>
 
-    <div id="image"></div>
+
+    <ul>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fab fa-linkedin-in"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fab fa-instagram"></span>
+            </a>
+        </li>
+    </ul>
+
+    <img src="first_img.png" id="image">
     <div id="first_text">
-        <p>Bonjour,</br>je m'appel <span>Nathan</span>,</br> j'étudie, je code, je crée.</p>
+        <p>Bonjour,</p><p>je m'appel<span> Nathan</span>,</p><p>j'étudie, je code, je crée.</p>
     </div>
+
 
     <p id="first_para">
         Actuellement en école d'ingénieur à Paris, je transforme une partie de mon temps libre en ligne de code et en projets mécatroniques. Voici l'ensemble de mes projets, accompagnés de précisions sur mes compétences.
     </p>
 
     <div id="services">
-        <h1 class="titre_categ">Services</h1>
-        <p>
-            Maîtrisant les langages informatiques nécaissaires à la création d'un page WEB, je suis à la recherche d'experience. Je répondrai donc à votre besoin de manière rigoureuse et professionnel.</br></br>Faite moi signe si vous êtes prêt(e) à vous faire une place sur la toile !
-        </p>
-        <div id="service_img"></div>
+        <div id="para_services_container">
+            <h1 class="titre_categ">Services</h1>
+            <p>
+                Maîtrisant les langages informatiques nécaissaires à la création d'un page WEB, je suis à la recherche d'experience. Je répondrai donc à votre besoin de manière rigoureuse et professionnel.</br></br>Faite moi signe si vous êtes prêt(e) à vous faire une place sur la toile !
+            </p>
+        </div>
+        <img src="under.png" id="service_img">
     </div>
 
     <div id="projets">
@@ -118,10 +145,9 @@
                 <input type="text" name="nom" required placeholder="Nom" class="champs">
                 <input type="text" name="prenom" required placeholder="Prénom" class="champs">
                 <input type="text" name="contact" required placeholder="Téléphone ou e-mail" class="champs">
-                <textarea id="story" name="story"
-                rows="10" cols="35" placeholder="Votre message">
+                <textarea class="champs" name="story" required placeholder="Votre message">
                 </textarea>
-                <input type="submit" value="Envoyer" id="envoyer_btn"/>
+                <input type="button" value="Envoyer" id="envoyer_btn"/>
         </form>
     </div>
 

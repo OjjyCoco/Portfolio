@@ -15,30 +15,31 @@ header{
     color: white;
     transition: all 150ms ease-in-out;
     box-shadow: 0 3px 10px 0px grey;
+    z-index: 10;
 }
-header h1{
-    font-family: 'titre';
+header span{
+    font-family: 'vraititre';
     letter-spacing: 10px;
     padding: 5px 5px;
+    font-size: 35px;
 }
 nav{
-    display: none;
     flex-direction: column;
     transition: all 150ms ease-in-out;
     margin: auto 0;
     transform-origin: top;
+    display: none;
 }
 nav a{
     text-decoration: none;
     text-align: center;
-    border: 2px solid transparent;
-    border-image: -webkit-linear-gradient(right, #2193b0,#6dd5ed);
+    border: 2px solid #2193b0;
     border-image-slice: 1;
     color: white;
     margin: 10px auto;
     padding: 10px 0px;
     width: 50%;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 header i{
     font-size: 25px;
@@ -49,22 +50,108 @@ header i{
     padding: 5px;
     border-radius: 5px;
 }
+#level{
+    width: 100%;
+    background-color: #2193b0;
+    height: 4px;
+    position: absolute;
+    bottom: 0%;
+    transform-origin: left;
+    transition: 300ms all ease-out;
+    display: none;
+    transform: scaleX(0);
+}
 .titre_categ{
     color: #2193b0;
     letter-spacing: 5px;
+    cursor: pointer;
 }
+
+
+ul
+{
+	margin: 30px 10px;
+    display: flex;
+    text-align: center;
+}
+ul li
+{
+    position: relative;
+	list-style: none;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	transform: rotate(-30deg) skew(25deg);
+}
+ul li span
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	transition: 300ms ease-in-out;
+	display:flex !important;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+    font-size: 30px;
+}
+@keyframes godown{
+    from {
+        transform: translate(400%, -400%);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+ul li:hover span:nth-child(5)
+{
+	transform: translate(40px, -40px);
+	opacity: 1;
+}
+ul li:hover span:nth-child(4)
+{
+	transform: translate(30px, -30px);
+	opacity: .8;
+}
+ul li:hover span:nth-child(3)
+{
+	transform: translate(20px, -20px);
+	opacity: 0.6;
+}
+ul li:hover span:nth-child(2)
+{
+	transform: translate(10px, -10px);
+	opacity: .4;
+}
+ul li:hover span:nth-child(1)
+{
+	transform: translate(0px, 0px);
+	opacity: .2;
+}
+
+ul li:nth-child(1) span
+{
+	background-color: #0073b0;
+}
+ul li:nth-child(2) span
+{
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+
+
+
+
 
 
 #image{
-    height: 50vh;
-    margin-top: 30px;
-    background-image: url("first_img.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    top: 5vh;
 }
 #first_text{
-    margin: 25px 15px;
     align-items: right;
 }
 #first_text p{
@@ -72,6 +159,9 @@ header i{
 }
 #first_text p span{
     color: #2193b0;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 #first_para{
@@ -99,10 +189,6 @@ header i{
 #service_img{
     width: 100%;
     height: 50vh;
-    background-image: url("under.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 
@@ -123,6 +209,7 @@ header i{
     width: 90%;
     margin: 60px auto;
     border: 1px solid black;
+    border-radius: 5px;
 }
 #resto_chinois{
     background-image: url("testimg.png");
@@ -236,17 +323,18 @@ header i{
     font-size: 20px;
     background-color: #25262aec;
     margin: 20px;
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
 }
 
 
 #formulaire{
     width: 100%;
-    height: 50vh;
+    height: 100%;
     background-color: #25262aec;
-    padding: 20px 0;
 }
 #formulaire form{
-    height: 50vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -255,6 +343,7 @@ header i{
 }
 .champs{
     padding: 10px 10px;
+    font-family: serif;
     margin: 10px 0;
     width: 80%;
     border-radius: 30px;
@@ -263,21 +352,25 @@ header i{
 }
 #formulaire textarea{
     width: 80%;
-    height: 170px;
+    min-height: 150px;
     border-radius: 15px;
     outline: none;
     overflow: auto;
     margin: 10px 0;
+    resize: none;
 }
 #envoyer_btn{
     width: 110px;
     border: none;
-    height: 60px;
+    min-height: 50px;
     color: black;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 15px;
     background-color: white;
     margin: 20px;
+    cursor: pointer;
+    transition: 150ms all ease-in-out;
+    border: 1px solid transparent;
 }
 
 
@@ -297,4 +390,9 @@ header i{
 {
 	font-family: 'para';
 	src: url('police/para.ttf');
+}
+@font-face
+{
+	font-family: 'vraititre';
+	src: url('police/vraititre.ttf');
 }
