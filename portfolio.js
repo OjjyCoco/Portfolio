@@ -51,12 +51,12 @@ function nav_appear_smooth(){
 function header_size_on_scroll(){
     window.addEventListener("scroll",() => {
         if(window.scrollY > 0){
-            header.style.height = "55px";
+            header.style.height = "7%";
             nom.style.visibility = "hidden";
-            nav.style.transform = "translateX(-30%)";
+            nav.style.transform = "translateX(-22%)";
         }
         else{
-            header.style.height = "90px";
+            header.style.height = "10%";
             nom.style.visibility = "visible";
             nav.style.transform = "translateX(0)";
         }
@@ -86,7 +86,7 @@ function apparition_logo(){
 
 function prog_bar(){
     window.addEventListener("scroll", () => {
-        let ratio = window.scrollY / document.body.scrollHeight;
+        let ratio = window.scrollY / (document.body.scrollHeight - window.innerHeight);
         progress_bar.style.transform = "scaleX(" + ratio + ")";
     })
 }
