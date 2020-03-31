@@ -10,19 +10,21 @@
     width: 100%;
     height: 2px;
     position: relative;
-    left: -100%;
     transition: 200ms ease-in-out;
+    transform-origin: center;
+    transform: scaleX(0);
 }
 .titre_categ:hover::after
 {
-    transform: translateX(100%);
+    transform: scaleX(1);
 }
 
 
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
@@ -32,13 +34,16 @@ header{
 header i{
     display: none !important;
 }
+header span{
+    
+}
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
-    transition: 200ms all;
+    width: 70%;
+    transition: 300ms all;
     height: 100%;
 }
 nav a{
@@ -65,9 +70,10 @@ nav a:hover{
 ul{
     display: flex;
     left: 30%;
-    top: 25%;
+    top: 20%;
     position: absolute;
     width: 300px;
+    overflow: visible;
 }
 
 
@@ -110,10 +116,11 @@ ul{
 }
 #image{
     position: absolute;
-    top: 50vh;
-    transform: translateY(-50%);
-    right: 10%;
-    width: 30%;
+    top: 8vh;
+    left: 68%;
+    transform: none;
+    width: 22%;
+    border-bottom: 1px solid black;
 }
 
 #first_para{
@@ -131,6 +138,7 @@ ul{
     flex-wrap: wrap;
     align-items: center;
     top: 60px;
+    margin: 0;
 }
 #para_services_container
 {
@@ -140,6 +148,7 @@ ul{
     justify-content: space-evenly;
     align-items: center;
     height: 60vh;
+    margin: 20px 0;
 }
 #para_services_container p{
     width: 90%;
@@ -150,7 +159,16 @@ ul{
 }
 #service_img{
     position: relative;
-    width: 30%;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 15vh;
+}
+#service_img p{
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: 5px;
+    left: 10%;
+    font-size: 40px;
 }
 
 
@@ -196,13 +214,14 @@ ul{
     flex-wrap: wrap;
     position: relative;
     margin-top: 20vh;
-    width: 60%;
+    width: 70%;
     margin: 15vh auto;
 }
 .projet{
-    width: 40%;
+    width: 400px;
     cursor: pointer;
-    transition: 250ms all ease-in-out;
+    margin: 10px;
+    transition: 150ms all ease-in-out;
 }
 .projet:hover{
     transform: scale(0.97);

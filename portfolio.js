@@ -7,8 +7,15 @@ const les_p = document.querySelectorAll("#first_text p");
 const les_span_logo = document.querySelectorAll("ul li span");
 const les_li = document.querySelectorAll("ul li");
 const progress_bar = document.getElementById("level");
+
+const FR = document.getElementById("FR");
+const EN = document.getElementById("EN");
+const move_div = document.getElementById("move");
+const move = document.getElementById("move");
+
 let largeur_fenêtre = window.innerWidth;
 let hauteur_fenêtre = window.innerHeight;
+
 
 
 if(largeur_fenêtre > 900){
@@ -16,10 +23,12 @@ if(largeur_fenêtre > 900){
     apparition_texte()
     apparition_logo()
     prog_bar()
+    change_language()
 }
 else if(largeur_fenêtre < 900){
     nav_appear()
     apparition_logo()
+    change_language()
 }
 
 /* phone devices */
@@ -53,12 +62,10 @@ function header_size_on_scroll(){
         if(window.scrollY > 0){
             header.style.height = "7%";
             nom.style.visibility = "hidden";
-            nav.style.transform = "translateX(-22%)";
         }
         else{
             header.style.height = "10%";
             nom.style.visibility = "visible";
-            nav.style.transform = "translateX(0)";
         }
     });
 }
@@ -90,6 +97,20 @@ function prog_bar(){
         progress_bar.style.transform = "scaleX(" + ratio + ")";
     })
 }
+
+function change_language(){
+    EN.addEventListener("click", function(){
+        move_div.style.transform = "translateX(50px)";
+        move.style.background = "linear-gradient(to left, #fc4a1a, #f7b733)";
+    });
+    
+    FR.addEventListener("click", function(){
+        move_div.style.transform = "translateX(0)";
+        move.style.background = "linear-gradient(to right, #0d548d, #1cb5e0)";
+    });
+}
+
+
 
 
 /* Pour retenir les données du formulaire

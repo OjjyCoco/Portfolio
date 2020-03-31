@@ -9,7 +9,6 @@ html{
 
 
 header{
-    height: 100%;
     text-align: left;
     background-color: #25262a;
     color: white;
@@ -27,9 +26,7 @@ header span{
 }
 nav{
     flex-direction: column;
-    transition: all 150ms ease-in-out;
     margin: auto 0;
-    transform-origin: top;
     display: none;
 }
 nav a{
@@ -52,6 +49,37 @@ header i{
     padding: 5px;
     border-radius: 5px;
 }
+#change
+{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px;
+    width: 100px;
+    position: relative;
+    margin: 0 30px;
+}
+#move
+{
+    width: 50px;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(to right, #0d548d, #1cb5e0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.changebtn
+{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    background-color: transparent;
+    color: white;
+}
 #level{
     width: 100%;
     background-color: #2193b0;
@@ -72,13 +100,16 @@ header i{
 
 ul
 {
-	margin: 30px 10px;
+    height: 20vh;
     display: flex;
     text-align: center;
+    overflow: hidden;
+    width: 100%;
 }
 ul li
 {
     position: relative;
+    top: 50%;
 	list-style: none;
 	width: 60px;
 	height: 60px;
@@ -151,7 +182,11 @@ ul li:nth-child(2) span
 
 #image{
     position: relative;
-    top: 5vh;
+    top: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    border-bottom: 1px solid black;
 }
 #first_text{
     align-items: right;
@@ -180,7 +215,7 @@ ul li:nth-child(2) span
     height: 100%;
     position: relative;
     top: 40px;
-    margin: 10px 5px;
+    margin: 10px 0px;
 }
 #services p
 {
@@ -190,14 +225,28 @@ ul li:nth-child(2) span
 }
 #service_img{
     width: 100%;
-    height: 50vh;
+    height: 30vh;
+    background-image: url("under.png");
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+#service_img p{
+    font-family: "blade";
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 20px;
 }
 #services_container{
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 50px 0;
+    align-items: center;
+    margin: 30px 0;
 }
 .service{
     width: 100%;
@@ -206,6 +255,7 @@ ul li:nth-child(2) span
     justify-content: space-around;
     align-items: center;
     transition: 200ms all;
+    margin: 0 20px;
 }
 .service:hover{
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
@@ -410,11 +460,7 @@ ul li:nth-child(2) span
 
 
 
-@font-face
-{
-	font-family: 'titre';
-	src: url('police/titre.ttf');
-}
+
 @font-face
 {
 	font-family: 'page';
@@ -429,4 +475,9 @@ ul li:nth-child(2) span
 {
 	font-family: 'vraititre';
 	src: url('police/vraititre.ttf');
+}
+@font-face
+{
+	font-family: 'blade';
+	src: url('police/BLADRMF_.ttf');
 }
