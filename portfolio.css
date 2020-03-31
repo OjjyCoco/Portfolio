@@ -19,7 +19,7 @@ header{
 }
 header span{
     font-family: 'vraititre';
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     padding: 5px 5px;
     font-size: 3.5vh;
     position: relative;
@@ -103,14 +103,10 @@ header i{
 
 ul
 {
-    height: 20vh;
     display: flex;
     text-align: center;
-    overflow: hidden;
     width: 100%;
-    position: relative;
-    top: -15px;
-    z-index: 1;
+    margin: 50px 0;
 }
 ul li
 {
@@ -193,7 +189,6 @@ ul li:nth-child(2) span
     transform: translateX(-50%);
     width: 70vw;
     border-bottom: 1px solid black;
-    z-index: 0;
 }
 #first_text{
     align-items: right;
