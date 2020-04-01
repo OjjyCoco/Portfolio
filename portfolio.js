@@ -1,5 +1,6 @@
 const list_icon = document.querySelector("header i");
 const nav = document.querySelector("nav");
+const nav_a = document.querySelectorAll("nav a")
 const h1 = document.querySelector("h1");
 const header = document.querySelector("header");
 const nom = document.querySelector("header span");
@@ -7,11 +8,20 @@ const les_p = document.querySelectorAll("#first_text p");
 const les_span_logo = document.querySelectorAll("ul li span");
 const les_li = document.querySelectorAll("ul li");
 const progress_bar = document.getElementById("level");
+const linked_in = document.querySelectorAll("ul li a")[0]
 
 const FR = document.getElementById("FR");
 const EN = document.getElementById("EN");
 const move_div = document.getElementById("move");
-const move = document.getElementById("move");
+
+const first_para = document.getElementById("first_para");
+const first_text = document.getElementById("first_text");
+const services_p = document.querySelector("#services #para_services_container p");
+const service_p_case = document.querySelectorAll("#services_container .service p");
+const titres = document.querySelectorAll(".titre_categ");
+const competences_p = document.querySelector("#competences p");
+const cvcontact_p = document.querySelector("#cv_contact p")
+const sendbtn = document.getElementById("envoyer_btn")
 
 let largeur_fenêtre = window.innerWidth;
 let hauteur_fenêtre = window.innerHeight;
@@ -24,11 +34,13 @@ if(largeur_fenêtre > 900){
     apparition_logo()
     prog_bar()
     change_language()
+    lien_non_existant()
 }
 else if(largeur_fenêtre < 900){
     nav_appear()
     apparition_logo()
     change_language()
+    lien_non_existant()
 }
 
 /* phone devices */
@@ -101,16 +113,46 @@ function prog_bar(){
 function change_language(){
     EN.addEventListener("click", function(){
         move_div.style.transform = "translateX(50px)";
-        move.style.background = "linear-gradient(to left, #fc4a1a, #f7b733)";
+        move_div.style.background = "linear-gradient(to left, #ed213a, #93291e)";
+        first_para.textContent = "Currently in engineering school in Paris, I transform part of my free time into online code and mechatronic projects. Here are some of my projects, with details about my skills."
+        first_text.innerHTML = "<p>Hello,</p><p>my name is<span> Nathan</span>,</p><p>I study, I code, I create.</p>"
+        nav_a[1].textContent = "Projects";
+        nav_a[2].textContent = "Skills";
+        titres[1].textContent = "Projects";
+        titres[2].textContent = "Skills";
+        services_p.innerHTML = "Mastering the computer languages necessary to create a WEB page, I am looking for experience. I will therefore meet your needs in a rigorous and professional way.</br></br>Let me know if you are ready to make a place for yourself on the web !";
+        service_p_case[0].textContent = "Communication with the customer to create the design corresponding to his request.";
+        service_p_case[1].textContent = "Development and hosting of the site on the server, relationship with the database.";
+        service_p_case[2].textContent = "Optimization of the natural referencing of the client's site on search engines.";
+        competences_p.textContent = "Notions of the tools of a full-stack developer. These languages will allow me to best meet your needs.";
+        cvcontact_p.textContent = "If you would like to know more, feel free to check my online CV! You will find a section containing my contact information. Otherwise, you can fill in the form below to leave me a message."
+        sendbtn.value = "Send";
     });
     
     FR.addEventListener("click", function(){
         move_div.style.transform = "translateX(0)";
-        move.style.background = "linear-gradient(to right, #0d548d, #1cb5e0)";
+        move_div.style.background = "linear-gradient(to right, #0d548d, #1cb5e0)";
+        first_para.textContent = "Actuellement en école d'ingénieur à Paris, je transforme une partie de mon temps libre en ligne de code et en projets mécatroniques. Voici certains de mes projets, accompagnés de précisions sur mes compétences."
+        first_text.innerHTML = "<p>Bonjour,</p><p>je m'appelle<span> Nathan</span>,</p><p>j'étudie, je code, je crée.</p>";
+        nav_a[1].textContent = "Projets";
+        nav_a[2].textContent = "Compétences";
+        titres[1].textContent = "Projets";
+        titres[2].textContent = "Compétences";
+        services_p.innerHTML = "Maîtrisant les langages informatiques nécaissaires à la création d'un page WEB, je suis à la recherche d'experience. Je répondrai donc à votre besoin de manière rigoureuse et professionnel.</br></br>Faites moi signe si vous êtes prêt(e) à vous faire une place sur la toile !";
+        service_p_case[0].textContent = "Communication avec le client pour créer le design correspondant à sa demande.";
+        service_p_case[1].textContent = "Développement et hébergement du site sur le serveur, relation avec la base de donnée.";
+        service_p_case[2].textContent = "Optimisation du référencement naturel du site du client sur les moteurs de recherche.";
+        competences_p.textContent = "Notions des outils d'un développeur full-stack. Ces langages me permettront de répondre le mieux à votre besoin.";
+        cvcontact_p.textContent = "Si vous voulez en savoir plus, n'hésitez pas à consulter mon CV en ligne ! Vous y trouverez une partie contenant mes coordonnées pour me contacter. Sinon, vous pouvez remplir le formulaire ci-dessous pour me laisser une message."
+        sendbtn.value = "Envoyer";
     });
 }
 
-
+function lien_non_existant(){
+    linked_in.addEventListener("click", function(e){
+        alert("Unfortunately, my LinkedIn profile doesn't exist yet... But it won't be long now!")
+    });
+}
 
 
 /* Pour retenir les données du formulaire

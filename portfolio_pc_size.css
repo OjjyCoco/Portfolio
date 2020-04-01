@@ -34,20 +34,17 @@ header{
 header i{
     display: none !important;
 }
-header span{
-    
-}
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 60%;
     transition: 300ms all;
     height: 100%;
 }
 nav a{
-    width: 20%;
+    width: 19%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -58,7 +55,7 @@ nav a{
     transition: 200ms all ease-in-out;
 }
 nav a:hover{
-    background-color: #6dd5ed;
+    background-color: #2193b0;
     color: black;
     border-color: white;
 }
@@ -69,6 +66,9 @@ nav a:hover{
     position: relative;
     top: 0;
     right: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -225,7 +225,7 @@ ul{
 .projet{
     width: 400px;
     cursor: pointer;
-    margin: 10px;
+    margin: 30px;
     transition: 150ms all ease-in-out;
 }
 .projet:hover{

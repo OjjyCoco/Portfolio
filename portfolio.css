@@ -86,7 +86,7 @@ header i{
 #level{
     width: 100%;
     background-color: #2193b0;
-    height: 4px;
+    height: 3px;
     position: absolute;
     bottom: 0%;
     transform-origin: left;
@@ -173,7 +173,7 @@ ul li:nth-child(1) span
 }
 ul li:nth-child(2) span
 {
-	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+	background-color: #21abf6;
 }
 
 
@@ -297,7 +297,7 @@ ul li:nth-child(2) span
     border: 1px solid black;
     border-radius: 5px;
 }
-#resto_chinois{
+#reso{
     background-image: url("testimg.png");
     background-size: cover;
     background-position: center;
@@ -328,7 +328,7 @@ ul li:nth-child(2) span
     color: white;
 }
 .out_btn{
-    height: 10px;
+    height: 6px;
     width: 90%;
     border-radius: 30px;
     margin: auto;
