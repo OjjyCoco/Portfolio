@@ -114,7 +114,7 @@ function change_language(){
     EN.addEventListener("click", function(){
         move_div.style.transform = "translateX(50px)";
         move_div.style.background = "linear-gradient(to left, #ed213a, #93291e)";
-        first_para.textContent = "Currently in engineering school in Paris, I transform part of my free time into online code and mechatronic projects. Here are some of my projects, with details about my skills."
+        first_para.textContent = "Currently in engineering school in Paris, I transform a part of my free time into lines of code and mechatronics projects. Here are some of my projects, with details about my skills."
         first_text.innerHTML = "<p>Hello,</p><p>my name is<span> Nathan</span>,</p><p>I study, I code, I create.</p>"
         nav_a[1].textContent = "Projects";
         nav_a[2].textContent = "Skills";
@@ -132,7 +132,7 @@ function change_language(){
     FR.addEventListener("click", function(){
         move_div.style.transform = "translateX(0)";
         move_div.style.background = "linear-gradient(to right, #0d548d, #1cb5e0)";
-        first_para.textContent = "Actuellement en école d'ingénieur à Paris, je transforme une partie de mon temps libre en ligne de code et en projets mécatroniques. Voici certains de mes projets, accompagnés de précisions sur mes compétences."
+        first_para.textContent = "Actuellement en école d'ingénieur à Paris, je transforme une partie de mon temps libre en lignes de code et en projets mécatroniques. Voici certains de mes projets, accompagnés de précisions sur mes compétences."
         first_text.innerHTML = "<p>Bonjour,</p><p>je m'appelle<span> Nathan</span>,</p><p>j'étudie, je code, je crée.</p>";
         nav_a[1].textContent = "Projets";
         nav_a[2].textContent = "Compétences";
