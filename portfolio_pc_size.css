@@ -208,29 +208,15 @@ ul{
 
 
 
-#projets h1{
-    position: absolute;
-    top: -40px;
+
+
+#container{
+    width: 100vw;
 }
-#projets{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    margin-top: 20vh;
-    width: 70%;
-    margin: 15vh auto;
+#btns_container{
+    width: 10vw;
 }
-.projet{
-    width: 400px;
-    cursor: pointer;
-    margin: 30px;
-    transition: 150ms all ease-in-out;
-}
-.projet:hover{
-    transform: scale(0.97);
-}
+
 
 
 

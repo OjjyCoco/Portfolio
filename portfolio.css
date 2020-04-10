@@ -281,28 +281,75 @@ ul li:nth-child(2) span
 
 
 
-#projets{
-    height: 100%;
-    margin: 16vh 0;
-    text-align: center;
-}
-#projets h1{
+
+
+
+
+
+
+#container{
+    height: 50vh;
     position: relative;
-    top: 20px;
+    margin: auto;
+    margin: 80px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-.projet{
-    height: 40vh;
-    width: 90%;
+#wrapper
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 300ms all;
+}
+.slide
+{
+    height: 70%;
+    transition: 0.3s;
+    width: 500px;
     margin: 60px auto;
     border: 1px solid black;
     border-radius: 5px;
 }
-#reso{
-    background-image: url("testimg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
+#buttons{
+    display: none;
+}
+.button
+{
+    display: none;
+}
+#buttonleft{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+}
+#buttonright{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+#btns_container{
+    width: 50vw; height: 5vh;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn_caroussel{
+    height: 15px;
+    background-color: #536878;
+    border-radius: 50px;
+    width: 15px;
+    transition: all 150ms;
+}
+.btn_caroussel:hover{
+    transform: scale(0.85);
 }
 
 
