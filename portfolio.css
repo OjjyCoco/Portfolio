@@ -281,6 +281,15 @@ ul li:nth-child(2) span
 
 
 
+#projet_titre{
+    text-align: center;
+    position: relative;
+    top: 90px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 
@@ -355,7 +364,14 @@ ul li:nth-child(2) span
 
 
 
-
+#titre_competence{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
 #competences{
     height: 100%;
     text-align: center;

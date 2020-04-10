@@ -1,3 +1,8 @@
+body{
+    overflow-x: hidden;
+}
+
+
 .titre_categ{
     display: flex;
     flex-direction: column;
@@ -208,6 +213,10 @@ ul{
 
 
 
+#projet_titre{
+    width: 20%;
+}
+
 
 
 #container{
@@ -217,7 +226,9 @@ ul{
     width: 10vw;
 }
 
-
+#titre_competence{
+    width: 20%;
+}
 
 
 .container{
