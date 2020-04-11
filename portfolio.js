@@ -47,9 +47,10 @@ else if(largeur_fenêtre < 900){
 
 /* phone devices */
 
+
 function nav_appear(){
     list_icon.addEventListener("click", () => {
-        if(nav.style.display === "none"){
+        if(window.getComputedStyle(nav).display === "none"){
             nav.style.display = "flex";
         }
         else{
@@ -58,13 +59,15 @@ function nav_appear(){
     })
 }
 
+
 function nav_appear_smooth(){
     list_icon.addEventListener("click", () => {
-        if(nav.style.transform === "scale(0)"){
-            nav.style.transform = "scale(1)";
+        if(nav.style.height == "0%"){
+            console.log("oui")
+            nav.style.height = "100%";
         }
         else{
-            nav.style.transform = "scale(0)";
+            nav.style.height = "0%";
         }
     })
 }
