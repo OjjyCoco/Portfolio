@@ -38,11 +38,12 @@ if(largeur_fenêtre > 900){
     caroussel_infini(2)
 }
 else if(largeur_fenêtre < 900){
-    nav_appear()
+    nav_appear_smooth()
     apparition_logo()
     change_language()
     lien_non_existant()
     caroussel_infini(1)
+    nav.style.transform = "translateY(-130%)"
 }
 
 /* phone devices */
@@ -60,14 +61,14 @@ function nav_appear(){
 }
 
 
+
 function nav_appear_smooth(){
     list_icon.addEventListener("click", () => {
-        if(nav.style.height == "0%"){
-            console.log("oui")
-            nav.style.height = "100%";
+        if(nav.style.transform == "translateY(-130%)"){
+            nav.style.transform = "translateY(-1%)"
         }
         else{
-            nav.style.height = "0%";
+            nav.style.transform = "translateY(-130%)"
         }
     })
 }

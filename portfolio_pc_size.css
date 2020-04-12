@@ -47,6 +47,7 @@ nav{
     width: 60%;
     transition: 300ms all;
     height: 100%;
+    position: static;
 }
 nav a{
     width: 19%;
