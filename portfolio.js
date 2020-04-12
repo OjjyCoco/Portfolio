@@ -26,7 +26,26 @@ const sendbtn = document.getElementById("envoyer_btn")
 let largeur_fenêtre = window.innerWidth;
 let hauteur_fenêtre = window.innerHeight;
 
-
+window.addEventListener("resize", () => {
+    if(window.matchMedia("screen and (min-width: 900px)")){ // grands écrans
+        header_size_on_scroll()
+        apparition_texte()
+        apparition_logo()
+        prog_bar()
+        change_language()
+        lien_non_existant()
+        caroussel_infini(2)
+        nav.style.transform = "translateY(0)"
+    }
+    else if(window.matchMedia("screen and (max-width: 900px)")){ // petits écrans
+        nav_appear_smooth()
+        apparition_logo()
+        change_language()
+        lien_non_existant()
+        caroussel_infini(1)
+        nav.style.transform = "translateY(-130%)"
+    }
+})
 
 if(largeur_fenêtre > 900){
     header_size_on_scroll()
