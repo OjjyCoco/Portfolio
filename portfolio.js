@@ -20,8 +20,9 @@ const services_p = document.querySelector("#services #para_services_container p"
 const service_p_case = document.querySelectorAll("#services_container .service p");
 const titres = document.querySelectorAll(".titre_categ");
 const competences_p = document.querySelector("#competences p");
-const cvcontact_p = document.querySelector("#cv_contact p")
-const sendbtn = document.getElementById("envoyer_btn")
+const cvcontact_p = document.querySelector("#cv_contact p");
+const sendbtn = document.getElementById("envoyer_btn");
+const non_exhaustive = document.getElementById("non-exhaustive");
 
 let largeur_fenêtre = window.innerWidth;
 let hauteur_fenêtre = window.innerHeight;
@@ -132,6 +133,7 @@ function change_language(){
         competences_p.textContent = "Notions of the tools of a full-stack developer. These languages will allow me to best meet your needs.";
         cvcontact_p.textContent = "If you would like to know more, feel free to check my online CV! You will find a section containing my contact information. Otherwise, you can fill in the form below to leave me a message."
         sendbtn.value = "Send";
+        non_exhaustive.textContent = "This is a non-exhaustive list, if you are interested in a particular model, please contact me !"
     });
     
     FR.addEventListener("click", function(){
@@ -150,6 +152,7 @@ function change_language(){
         competences_p.textContent = "Notions des outils d'un développeur full-stack. Ces langages me permettront de répondre le mieux à votre besoin.";
         cvcontact_p.textContent = "Si vous voulez en savoir plus, n'hésitez pas à consulter mon CV en ligne ! Vous y trouverez une partie contenant mes coordonnées pour me contacter. Sinon, vous pouvez remplir le formulaire ci-dessous pour me laisser une message."
         sendbtn.value = "Envoyer";
+        non_exhaustive.textContent = "Ceci une liste non-exhaustive, si vous êtes intéressé par une maquette particulère, contactez moi !"
     });
 }
 
