@@ -46,11 +46,17 @@ else if(largeur_fenêtre < 900){
     change_language()
     lien_non_existant()
     caroussel_infini(1)
+    loader()
     nav.style.transform = "translateY(-130%)"
 }
 
 /* phone devices */
 
+function loader(){
+
+    outer_loader.style.display = "none";
+
+}
 
 function nav_appear(){
     list_icon.addEventListener("click", () => {
