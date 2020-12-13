@@ -1,7 +1,57 @@
 body{
     overflow-x: hidden;
+    height: 100vh;
 }
 
+/* loader :*/
+#outer_loading
+{
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    z-index: 99;
+    top: 0%;
+    left: 0%;
+    background: #f1f1f1;
+}
+.loading
+{
+	position: absolute;
+	top: 45%;
+	left: 49%;
+	width: 15px;
+	height: 15px;
+    transform: rotate(75deg);
+    z-index: 100;
+}
+.loading::before,.loading::after
+{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 15px;
+	height: 15px;
+	transform: translate(-50%,-50%);
+	border-radius: 15px;
+	animation: loading 1.2s infinite linear;
+}
+.loading::before
+{
+	box-shadow: 15px 15px #e77f67, -15px -15px #778beb;
+}
+.loading::after
+{
+	box-shadow: 15px 15px #f8a5c2, -15px -15px #f5cd79;
+	transform: translate(-50%,-50%) rotate(90deg);
+}
+@keyframes loading
+{
+	50%
+	{
+		height: 40px;
+	}
+}
 
 .titre_categ{
     display: flex;

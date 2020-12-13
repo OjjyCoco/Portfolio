@@ -23,6 +23,8 @@ const competences_p = document.querySelector("#competences p");
 const cvcontact_p = document.querySelector("#cv_contact p");
 const sendbtn = document.getElementById("envoyer_btn");
 const non_exhaustive = document.getElementById("non-exhaustive");
+const outer_loader = document.getElementById("outer_loading");
+const body = document.getElementById("body");
 
 let largeur_fenêtre = window.innerWidth;
 let hauteur_fenêtre = window.innerHeight;
@@ -36,6 +38,7 @@ if(largeur_fenêtre > 900){
     change_language()
     lien_non_existant()
     caroussel_infini(2)
+    loader()
 }
 else if(largeur_fenêtre < 900){
     nav_appear_smooth()
@@ -74,6 +77,15 @@ function nav_appear_smooth(){
 }
 
 /* laptop devices */
+
+function loader(){
+
+    window.addEventListener("load", function(){
+        outer_loader.style.display = "none";
+        body.style.height = "100%";
+    });
+
+}
 
 function header_size_on_scroll(){
     window.addEventListener("scroll",() => {
