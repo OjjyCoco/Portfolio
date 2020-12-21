@@ -458,19 +458,19 @@ ul li:nth-child(2) span
 }
 #html_in
 {
-    transform: scaleX(0.88);
+    transform: scaleX(0.8);
     background-color: #e34c26;
 }
 #css_in{
-    transform: scaleX(0.77);
+    transform: scaleX(0.74);
     background-color: #0070bb;
 }
 #js_in{
-    transform: scaleX(0.68);
+    transform: scaleX(0.74);
     background-color: #f0db4f;
 }
 #python_in{
-    transform: scaleX(0.74);
+    transform: scaleX(0.78);
     background-color: #3472a3;
 }
 #github_in{
