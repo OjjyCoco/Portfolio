@@ -36,7 +36,6 @@ if(largeur_fenêtre > 900){
     apparition_logo()
     prog_bar()
     change_language()
-    lien_non_existant()
     caroussel_infini(2)
     loader()
 }
@@ -44,7 +43,6 @@ else if(largeur_fenêtre < 900){
     nav_appear_smooth()
     apparition_logo()
     change_language()
-    lien_non_existant()
     caroussel_infini(1)
     loader()
     nav.style.transform = "translateY(-130%)"

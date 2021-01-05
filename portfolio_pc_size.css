@@ -221,7 +221,7 @@ ul{
 #service_img{
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     margin-bottom: 15vh;
 }
 #service_img p{
@@ -231,6 +231,8 @@ ul{
     left: 10%;
     font-size: 40px;
 }
+
+
 
 
 #services_container{
